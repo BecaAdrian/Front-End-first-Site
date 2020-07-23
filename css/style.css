@@ -58,6 +58,57 @@ body{
 	padding-bottom:600px;
 	border:3px solid grey;
 	float:left;
+	display: inline;
+}
+
+.tinta-mare:hover{
+	background-color:blue;
+}
+
+.tinta-medie:hover{
+	background-color:red;
+}
+
+.tinta-mica:hover{
+	background-color:blue;
+}
+
+.tintele{
+	display:flex;
+	flex-direction: column;
+	align-items:center;
+}
+
+.tinta-mica{
+	position:absolute;
+  	background-color:red;
+  	border-radius:50%;
+  	border:3px solid black;
+  	right:15px;
+  	top:15px;
+  	left:15px;
+  	bottom:15px;
+}
+
+.tinta-medie{
+	position:absolute;
+  	background-color:blue;
+  	border-radius:50%;
+  	border:3px solid black;
+  	right:15px;
+    left:15px;
+    top:15px;
+    bottom:15px;
+}
+
+.tinta-mare{
+	position:relative;
+  	height:100px;
+  	width:100px;
+  	background-color:red;
+  	border-radius:50%;
+  	border:3px solid black;
+  	margin-top:20px;
 }
 
 .imagini{
@@ -68,7 +119,7 @@ body{
 	margin:15px;
 	padding:5px;
 	line-height:16px;
-  	animation:mymove 1.7s 3;
+  	animation:mymove 1.7s 0;
 }
 
 @keyframes mymove {
@@ -77,4 +128,64 @@ body{
 
 .imagini-first{
 	flex:2;
+}
+
+/*
+.circle{
+    display: flex;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    border: blue solid 10px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-top: 10px;
+}
+.circle::before {
+    content: "";
+    background-color: blue;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+}
+*/
+.circle{
+	margin:10px auto;
+    position:relative;
+    display:flex;
+    background-color:red;
+    justify-content:center;
+    align-items:center;
+    border:black solid 3px;
+    border-radius:50%;
+    height:100px;
+    width:100px;
+}
+.circle::before {
+    content:"";
+    background-color:blue;
+    border:black solid 3px;
+    border-radius:50%;
+    height:70%;
+    width:70%;
+}
+
+.circle::after {
+    content:"";
+	position:absolute;
+    background-color:red;
+    border:black solid 3px;
+    border-radius: 50%;
+    height:30%;
+    width:30%;
+}
+
+.circle:hover,
+.circle:hover::after{
+	background-color:blue;
+}
+
+.circle:hover::before{
+	background-color:red;
 }
