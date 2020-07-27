@@ -43,6 +43,7 @@ body{
 }
 
 .title{
+	display: flex;
 	top:0;
 	position:sticky;
 	opacity:0.6;
@@ -50,6 +51,8 @@ body{
 	border:16px;
 	background-color:blue;
 	color:#fff;
+	flex-flow: row wrap;
+	justify-content: space-between;
 }
 
 .side-menu{
